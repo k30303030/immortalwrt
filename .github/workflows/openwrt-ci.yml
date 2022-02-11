@@ -7281,3 +7281,5 @@ CONFIG_STRACE_NONE=y
           file: ./artifact/firmware/*
           tag: ${{ github.ref }}
           file_glob: true
+
+
