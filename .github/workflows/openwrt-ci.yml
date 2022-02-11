@@ -201,7 +201,7 @@ jobs:
           CONFIG_GRUB_TITLE="ImmortalWrt"                                                                               
           CONFIG_TARGET_IMAGES_GZIP=y                                                    
           CONFIG_TARGET_KERNEL_PARTSIZE=16                                               
-          CONFIG_TARGET_ROOTFS_PARTSIZE=160                                              
+          CONFIG_TARGET_ROOTFS_PARTSIZE=500                                              
           CONFIG_TARGET_ROOTFS_PARTNAME=""                                               
           CONFIG_JSON_OVERVIEW_IMAGE_INFO=y                                                                         
           CONFIG_SIGNED_PACKAGES=y                                                       
@@ -2825,38 +2825,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-firewall-uk is not set                              
           # CONFIG_PACKAGE_luci-i18n-firewall-vi is not set                              
           CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y                                      
-          # CONFIG_PACKAGE_luci-i18n-firewall-zh-tw is not set                           
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-ar is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-bg is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-bn_BD is not set                    
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-ca is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-cs is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-da is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-de is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-el is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-en is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-es is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-fi is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-fr is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-he is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-hi is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-hu is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-it is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-ja is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-ko is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-mr is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-ms is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-nb_NO is not set                    
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-pl is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-pt is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-pt_BR is not set                    
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-ro is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-ru is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-sk is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-sv is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-tr is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-uk is not set                       
-          # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-vi is not set                       
+                     
           CONFIG_PACKAGE_luci-i18n-https-dns-proxy-zh-cn=y                               
           # CONFIG_PACKAGE_luci-i18n-https-dns-proxy-zh-tw is not set                    
           # CONFIG_PACKAGE_luci-i18n-https_dns_proxy-es is not set                       
@@ -2868,33 +2837,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-smartinfo-zh-cn=y                                     
           CONFIG_PACKAGE_luci-i18n-socat-zh-cn=y                                         
           CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y                                      
-          # CONFIG_PACKAGE_luci-i18n-statistics-bg is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-ca is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-cs is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-de is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-el is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-en is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-es is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-fr is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-he is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-hi is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-hu is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-it is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-ja is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-ko is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-mr is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-ms is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-nb_NO is not set                         
-          # CONFIG_PACKAGE_luci-i18n-statistics-pl is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-pt is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-pt_BR is not set                         
-          # CONFIG_PACKAGE_luci-i18n-statistics-ro is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-ru is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-sk is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-sv is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-tr is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-uk is not set                            
-          # CONFIG_PACKAGE_luci-i18n-statistics-vi is not set                            
+                           
           CONFIG_PACKAGE_luci-i18n-statistics-zh-cn=y                                    
           # CONFIG_PACKAGE_luci-i18n-statistics-zh-tw is not set                         
           CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y                                          
