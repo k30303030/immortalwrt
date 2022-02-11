@@ -1329,10 +1329,7 @@ jobs:
           CONFIG_BUSYBOX_DEFAULT_ASH_GETOPTS=y                                           
           CONFIG_BUSYBOX_DEFAULT_ASH_CMDCMD=y                                                                        
           CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_MATH=y                                       
-          CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_MATH_64=y                                    
-          # CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_MATH_BASE is not set                       
-          # CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_EXTRA_QUIET is not set                     
-          # CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_STANDALONE is not set                      
+          CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_MATH_64=y                                                   
           CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_NOFORK=y                                     
           # CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_READ_FRAC is not set                       
           # CONFIG_BUSYBOX_DEFAULT_FEATURE_SH_HISTFILESIZE is not set                    
