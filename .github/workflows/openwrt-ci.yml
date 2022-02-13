@@ -1,21 +1,20 @@
-
-
-
-
-il.com>
-
-
-
+#
+# This is free software, lisence use MIT.
+# 
+# Copyright (C) 2019 P3TERX <https://p3terx.com>
+# Copyright (C) 2020 KFERMercer <KFER.Mercer@gmail.com>
+# 
+# <https://github.com/KFERMercer/OpenWrt-CI>
+#
 
 name: OpenWrt-CI
-
 
 on:
   push:
     branches: 
       - openwrt-21.02
-  
-  
+  # schedule:
+  #   - cron: 0 20 * * *
   release:
     types: [published]
 
@@ -35,7 +34,24 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: master
+          fetch-depth: 0
+          
+      - name: cache
+        uses: klever1988/cachewrtbuild@main
+        with:
+          #是否一并缓存.ccache目录，如果你启用了ccache。这是唯一的常用参数，其他三个用于除错，一般不需要调整
+          ccache: false
 
+          #是否缓存工具链目录
+          toolchain: true
+
+          #是否跳过工具链编译
+          skip: true
+
+          #清空缓存
+          clean: false
+      
+      
       - name: Space cleanup
         env:
           DEBIAN_FRONTEND: noninteractive
@@ -48,14 +64,14 @@ jobs:
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
 
-          nwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
-          
-          
-          ir/host
-          d_dir/hostpkg
-          
-          
-          
+          # sudo mkdir -p -m 777 /mnt/openwrt/bin /mnt/openwrt/build_dir/host /mnt/openwrt/build_dir/hostpkg /mnt/openwrt/dl /mnt/openwrt/feeds /mnt/openwrt/staging_dir
+          # ln -s /mnt/openwrt/bin ./bin
+          # mkdir -p ./build_dir
+          # ln -s -f /mnt/openwrt/build_dir/host ./build_dir/host
+          # ln -s -f /mnt/openwrt/build_dir/hostpkg ./build_dir/hostpkg
+          # ln -s /mnt/openwrt/dl ./dl
+          # ln -s /mnt/openwrt/feeds ./feeds
+          # ln -s /mnt/openwrt/staging_dir ./staging_dir
 
           df -h
 
@@ -69,15 +85,11 @@ jobs:
           rm -f ./.config*
           touch ./.config
 
-          
-          关系
-          
+          #
+          # 在 cat >> .config <<EOF 到 EOF 之间粘贴你的编译配置, 需注意缩进关系
+          # 例如:
 
           cat >> .config <<EOF                                                                    
-          
-                                              
-                                              
-                                              
           CONFIG_MODULES=y
           CONFIG_HAVE_DOT_CONFIG=y
           CONFIG_TARGET_x86=y
@@ -1051,9 +1063,7 @@ jobs:
           CONFIG_PACKAGE_libjson-script=y
           CONFIG_PACKAGE_lm-sensors=y
           CONFIG_PACKAGE_shellsync=y
-          CONFIG_STRACE_NONE=y                                                       
-                              
-                                              
+          CONFIG_STRACE_NONE=y                                        
           EOF
 
           #
